@@ -44,15 +44,15 @@ services:
 
   # --- Option 2: Render Node Web Service (Dynamic Domain-Scoped Sitemap via server.js) ---
   # Uncomment below if deploying as a Node Web Service instead of a Static Site:
-  # - type: web
-  #   name: csr-vanilla-node-render
-  #   runtime: node
-  #   plan: free
-  #   buildCommand: "echo 'Zero dependencies to install'"
-  #   startCommand: "node server.js"
-  #   healthCheckPath: /healthz
-  #   envVars:
-  #     - key: NODE_ENV
-  #       value: production
-  #     - key: PORT
-  #       value: 10000
+   - type: web
+    name: csr-vanilla-node-render
+    runtime: node
+    plan: free
+    buildCommand: "echo 'Zero dependencies to install'"
+    startCommand: "node server.js"
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
